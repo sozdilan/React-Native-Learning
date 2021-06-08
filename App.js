@@ -8,6 +8,7 @@
    StyleSheet,
    Text,
    View,
+
  } from 'react-native';
 
 
@@ -24,7 +25,7 @@ export default class App extends React.Component{
       //<BottomNavigator></BottomNavigator>
       //<DrawerNavigation/>
       //<Route/>
-      <View></View>
+      <View><Text>ANA SAYFA</Text></View>
 
     )
   }

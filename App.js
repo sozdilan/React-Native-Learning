@@ -12,11 +12,12 @@
  } from 'react-native';
 
 
- import StackNavigator from './Navigation/StackNavigator';
- import BottomNavigator from './Navigation/BottomTabNavigation'
- import DrawerNavigation from './Navigation/Drawer'
+ //import StackNavigator from './Navigation/StackNavigator';
+ //import BottomNavigator from './Navigation/BottomTabNavigation'
+ //import DrawerNavigation from './Navigation/Drawer'
 
-import Route from './src/Route'
+//import Route from './src/Route'
+import Route from './Formik&Yup/src/Route'
 
 export default class App extends React.Component{
   render(){
@@ -25,7 +26,8 @@ export default class App extends React.Component{
       //<BottomNavigator></BottomNavigator>
       //<DrawerNavigation/>
       //<Route/>
-      <View><Text>ANA SAYFA</Text></View>
+      //<View><Text>ANA SAYFA</Text></View>
+      <Route/>
 
     )
   }

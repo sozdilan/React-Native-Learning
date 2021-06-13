@@ -26,6 +26,7 @@ export default class Login extends React.Component{
                 <View style={style.logo_area}>
                     <Image style={{width:80,height:116}} resizeMode={"contain"} source={require('../../../../assets/images/home.png')}></Image>
                 </View>
+
                 <View style={style.board}>
 
                     <Formik 
@@ -54,7 +55,6 @@ export default class Login extends React.Component{
                         placeholder={"Username"}/>
                         {(errors.username)&& <Text style={style.alert}>{errors.username}</Text>}
                     </View>
-
                     <View style={style.item}>
                         <TextInput
                         value={values.password}
@@ -79,13 +79,8 @@ export default class Login extends React.Component{
                             <Text style={style.button_text}>Login</Text>
                         </TouchableOpacity>
                     </View>
-                    </View>)
-                    }
+                    </View>)}
                     </Formik>
-
-
-
-
                     <View style={[style.item],{marginbottom:10,justifyContent:'center',alignItems:'center'}}>
                         <Text>Or</Text>
                     </View>

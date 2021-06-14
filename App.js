@@ -14,8 +14,6 @@
 
  } from 'react-native';
 
-
-
  //import StackNavigator from './Navigation/StackNavigator';
  //import BottomNavigator from './Navigation/BottomTabNavigation'
  //import DrawerNavigation from './Navigation/Drawer'
@@ -29,9 +27,12 @@ import * as Yup from 'yup'
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 
-import MainStore from "./MobX/MainStore";
-import MainObser from './MobX';
+import STORE from './MobX';
+import { Provider } from 'mobx-react';
+import MainObser from './MobX/Main';
 
+import GeolocationClass from './Geolocation'
+import Map from './Map/MainMap';
 
 export default class App extends React.Component{
 
@@ -68,10 +69,12 @@ export default class App extends React.Component{
 
       //<Route/>
       //<View><Text>Ana Sayfa </Text></View>
-      <MainObser/>
-      
 
-   
+      //<Provider {... STORE}><MainObser/></Provider>
+
+      //<GeolocationClass/>
+      <Map/>
+
     )
   }
 }

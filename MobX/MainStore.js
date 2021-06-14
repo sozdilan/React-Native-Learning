@@ -1,23 +1,39 @@
 import React from 'react';
-import {View,Text} from 'react-native';
+import {View,Text, Alert} from 'react-native';
 
-import {observable,action} from "mobx";
+import {observable,action,computed,makeObservable, autorun,reaction,when} from "mobx";
 class MainStore{
 
-     @observable name="dilan söz";
+     @observable name="dilan";
+     @observable surname='Söz';
 
-     /*constructor(){
+     constructor(){
          makeObservable(this);
 
+         /*autorun(()=>{
+             Alert.alert(this.name)
+         })*/
+         
+         /*reaction(()=>this.name,name=> {
+             if(name=="Ali"){
+                 Alert.alert("İsim Ali")
+             }
+         })*/
 
-     }*/
+        /* when(()=>this.name=='Ali',()=>{Alert.alert("Name is ali")});*/
+
+     }
+
+     /*
      @action getName(){
          return this.name;
      }
 
     @action setName(name){
-        this.name=name
-
+        this.name=name;
     }
+    @computed get fullName(){
+        return `${this.name} ${this.surname}`
+    }*/
  }
  export default new MainStore();

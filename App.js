@@ -27,12 +27,14 @@ import * as Yup from 'yup'
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 
-import STORE from './MobX';
+/*import STORE from './MobX';
 import { Provider } from 'mobx-react';
-import MainObser from './MobX/Main';
+import MainObser from './MobX/Main';*/
 
 import GeolocationClass from './Geolocation'
-import Map from './Map/MainMap';
+import AxiosMain from './Axios-Json-FlatList/Main'
+
+import Main from './Permissions/Main'
 
 export default class App extends React.Component{
 
@@ -73,7 +75,12 @@ export default class App extends React.Component{
       //<Provider {... STORE}><MainObser/></Provider>
 
       //<GeolocationClass/>
-      <Map/>
+      //<Map/>
+
+      //<AxiosMain/>
+      //<Main/>
+
+       <View><Text>Ana Sayfa </Text></View>
 
     )
   }
